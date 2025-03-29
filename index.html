@@ -5,44 +5,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>我的个人博客</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            color: #333;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        header {
-            background: #f4f4f4;
-            padding: 20px;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        nav {
-            background: #333;
-            color: #fff;
-            padding: 10px;
-        }
-        nav a {
-            color: #fff;
-            margin-right: 15px;
-            text-decoration: none;
-        }
-        article {
-            margin-bottom: 30px;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 20px;
-        }
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: #f4f4f4;
-            margin-top: 20px;
-        }
-    </style>
+     body {
+        /* 背景图片设置 */
+        background-image: url('images/your-background.jpg');
+        background-size: cover;
+        background-position: center center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        position: relative;
+        
+        /* 原有样式 */
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        color: #333;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+     }
+    
+    /* 半透明遮罩 */
+    body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(255, 255, 255, 0.7);
+        z-index: -1;
+    }
+    
+    header {
+        background: rgba(244, 244, 244, 0.9); /* 添加透明度 */
+        padding: 20px;
+        text-align: center;
+        margin-bottom: 20px;
+        border-radius: 8px; /* 添加圆角 */
+    }
+    
+    nav {
+        background: rgba(51, 51, 51, 0.9); /* 添加透明度 */
+        color: #fff;
+        padding: 10px;
+        border-radius: 8px; /* 添加圆角 */
+    }
+    
+    nav a {
+        color: #fff;
+        margin-right: 15px;
+        text-decoration: none;
+    }
+    
+    article {
+        background-color: rgba(255, 255, 255, 0.9);
+        padding: 20px;
+        border-radius: 8px;
+        margin-bottom: 30px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* 添加阴影 */
+    }
+    
+    footer {
+        text-align: center;
+        padding: 20px;
+        background: rgba(244, 244, 244, 0.9); /* 添加透明度 */
+        margin-top: 20px;
+        border-radius: 8px; /* 添加圆角 */
+    }
+</style>
 </head>
 <body>
     <header>
